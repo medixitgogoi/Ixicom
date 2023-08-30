@@ -3,6 +3,7 @@ import { Urbanist } from 'next/font/google';
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Deal from '@/components/Deal';
+import Newsletter from '@/components/Newsletter';
 
 const urbanist = Urbanist({ 
   subsets: ['latin'], 
@@ -21,6 +22,7 @@ export default function RootLayout({ children }) {
         <Deal />
         <Navbar />
         {children}
+        <Newsletter />
         <Footer />
       </body>
     </html>

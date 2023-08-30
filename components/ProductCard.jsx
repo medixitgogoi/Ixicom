@@ -16,7 +16,7 @@ const ProductCard = async ({ product }) => {
         <h2 className='my-2 font-medium md:text-lg'>{product.title}</h2>
         <div className='flex items-center text-black/[0.5]'>
           <p className='md:text-lg bg-blue-200 px-2 rounded-sm text-black font-bold'>₹{Math.floor(product.price * 83)}</p>
-          <p className='text-base line-through'>₹{Math.floor((product.price * 83) + Math.random() * 20)}</p>
+          <p className='bg-blue-200 ml-2 px-2 font-semibold rounded-sm line-through'>₹{Math.floor((product.price * 83) + Math.random() * 20)}</p>
           <div className='flex items-center pb-1 gap-[1px] w-full justify-end'>
             <TbDiscount2 className="text-green-500 text-lg md:text-[22px]" />
             <p className="px-1 text-sm md:text-base font-medium rounded-sm bg-green-500 text-white">{Math.ceil(Math.random() * 20)}%off</p>
