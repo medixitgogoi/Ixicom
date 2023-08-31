@@ -13,10 +13,10 @@ const ProductDetails = async ({ params: { id } }) => {
 
     return (
         <main className="px-2 sm:px-5 md:px-10">
-            <div className="lg:my-28 lg:mx-36 text-white h-[130vh] md:h-[110vh] lg:h-[60vh] flex items-center flex-col lg:flex-row gap-5 lg:gap-[80px]">
+            <div className="lg:mx-36 text-white h-[130vh] md:h-[110vh] flex items-center flex-col lg:flex-row gap-5 lg:gap-[80px]">
 
-                <section className="relative w-[90%] md:h-full flex-1">
-                    <Image className="mt-6 lg:mt-0 lg:p-6 rounded-md object-contain" src={product.image} fill alt="product" />
+                <section className="relative w-[90%] md:h-[70vh] flex-1">
+                    <Image className="mt-6 lg:mt-0 lg:p-6 object-contain" src={product.image} fill alt="product" />
                 </section>
 
                 <section className="flex-1 rounded-md px-3 py-8">
