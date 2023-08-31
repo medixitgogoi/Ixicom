@@ -9,6 +9,7 @@ const ProductDetails = async ({ params: { id } }) => {
 
     const product = await getProduct(id);
     const products = await getRelatedProducts(product.category);
+    // console.log(product.category);
 
     return (
         <main className="px-2 sm:px-5 md:px-10">

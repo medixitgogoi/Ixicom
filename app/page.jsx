@@ -1,5 +1,6 @@
 "use client"
 
+import Category from "@/components/Category";
 import HeroBanner from "@/components/HeroBanner";
 import Offer from "@/components/Offer";
 import { useState } from "react";
@@ -17,7 +18,7 @@ export default function Home() {
         <div className="text-lg md:text-xl">The only ecommerce application you need</div>
         <h1 className="font-semibold text-center text-xl md:text-2xl leading-6 w-full mx-auto my-2">Unveiling the Ultimate Ecommerce Haven: Explore a World of Electronics, Dazzling Jewellery, and Fashion Bliss for Men and Women!</h1>
       </section>
-
+      <Category />
       <Offer />
 
     </main>

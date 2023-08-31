@@ -14,7 +14,7 @@ const Navbar = () => {
   const controlNavbar = () => {
     if (window.scrollY > 200) {
       if (window.scrollY > lastScrollY) {
-        setShow("-translate-y-10");
+        setShow("-translate-y-14");
       } else {
         setShow("shadow-lg");
       }
@@ -32,7 +32,7 @@ const Navbar = () => {
   }, [lastScrollY]);
 
   return (
-    <div className={`w-full px-5 sm:px-10 md:px-20 flex justify-between items-center h-10 bg-black text-white z-20 sticky top-0 transition-transform duration-300 ${show}`}>
+    <div className={`w-full px-5 sm:px-10 md:px-20 flex justify-between items-center h-14 bg-black text-white z-20 sticky top-0 transition-transform duration-300 ${show}`}>
       <Link href="/" className="uppercase font-extrabold text-xl md:text-2xl">
         Ixicom
       </Link>
