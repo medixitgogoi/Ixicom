@@ -1,19 +1,54 @@
-import ProductCard from "@/components/ProductCard";
-import getProducts from "../libs/getProducts";
+import CategoryCard from "@/components/CategoryCard";
+import { FaHashtag } from "react-icons/fa";
 
-const Products = async () => {
+const categories = [
+    {
+        id: 1,
+        title: "Men's Fashion",
+        category: "men's clothing",
+    },
+    {
+        id: 2,
+        title: "Women's Fashion",
+        category: "women's clothing",
+    },
+    {
+        id: 3,
+        title: "Electronics",
+        category: "electronics",
+    },
+    {
+        id: 4,
+        title: "Jewellery",
+        category: "jewelery",
+    },
+]
 
-    const products = await getProducts();
+const Products = () => {
 
     return (
         <main>
-            <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-7 my-5 md:my-14 px-10 py-3 md:px-16">
-                {products.map((product) => {
+
+
+            {
+                categories.map((cat) => {
                     return (
-                        <ProductCard key={product.id} product={product} />
+                        <div className="flex flex-col justify-center items-center">
+
+                            <div className="py-2 md:py-3 px-2 rounded-md border-2 border-black bg-black text-white md:px-8 text-lg md:text-xl flex justify-center text-center mt-10 md:justify-start items-center tracking-wider">
+                                <FaHashtag className="text-xl mr-1" />
+                                <div className="font-bold">Bestseller in </div>
+                                <div className="bg-blue-200 px-2 md:px-3 ml-2 py-1 text-black font-extrabold rounded-md uppercase">{cat.title}</div>
+                            </div>
+
+                            <CategoryCard category={cat.category} />
+
+                        </div>
                     )
-                })}
-            </section>
+                })
+            }
+
+
         </main>
     );
 }

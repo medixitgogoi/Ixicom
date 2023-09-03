@@ -6,8 +6,8 @@ const loading = () => {
     return (
         <div className="h-screen w-full flex items-center justify-center">
             <ThreeCircles
-                height="100"
-                width="100"
+                height="70"
+                width="70"
                 color="#4fa94d"
                 wrapperStyle={{}}
                 wrapperClass=""

@@ -8,6 +8,7 @@ import Image from "next/image";
 import img1 from "@/public/slide-1.png";
 import img2 from "@/public/slide-2.png";
 import img3 from "@/public/slide-3.png";
+import Link from "next/link";
 
 const HeroBanner = () => {
   return (
@@ -34,15 +35,21 @@ const HeroBanner = () => {
       >
         <div>
           <Image src={img1} alt="img1" />
-          <button className="absolute z-10 top-5 md:top-10 bg-white w-max py-[2px] px-[2px] sm:px-2 md:px-4 sm:py-2 font-bold md:text-lg cursor-pointer uppercase">Shop now</button>
+          <Link href="/products">
+            <button className="absolute z-10 top-5 md:top-10 bg-white w-max py-[2px] px-[2px] sm:px-2 md:px-4 sm:py-2 font-bold md:text-lg cursor-pointer uppercase">Shop now</button>
+          </Link>
         </div>
         <div>
           <Image src={img2} alt="img2" />
-          <button className="absolute z-10 top-5 md:top-10 bg-white w-max py-[2px] px-[2px] sm:px-2 md:px-4 sm:py-2 font-bold md:text-lg cursor-pointer uppercase">Shop now</button>
+          <Link href="/products">
+            <button className="absolute z-10 top-5 md:top-10 bg-white w-max py-[2px] px-[2px] sm:px-2 md:px-4 sm:py-2 font-bold md:text-lg cursor-pointer uppercase">Shop now</button>
+          </Link>
         </div>
         <div>
           <Image src={img3} alt="img3" />
-          <button className="absolute z-10 top-5 md:top-10 bg-white w-max py-[2px] px-[2px] sm:px-2 md:px-4 sm:py-2 font-bold md:text-lg cursor-pointer uppercase">Shop now</button>
+          <Link href="/products">
+            <button className="absolute z-10 top-5 md:top-10 bg-white w-max py-[2px] px-[2px] sm:px-2 md:px-4 sm:py-2 font-bold md:text-lg cursor-pointer uppercase">Shop now</button>
+          </Link>
         </div>
       </Carousel>
     </div>

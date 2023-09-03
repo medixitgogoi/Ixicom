@@ -10,7 +10,6 @@ const ProductDetails = async ({ params: { id } }) => {
     const product = await getProduct(id);
     const products = await getRelatedProducts(product.category);
     const productId = id;
-    // console.log(productId);
 
     return (
         <main className="px-2 sm:px-5 md:px-10">
@@ -40,15 +39,15 @@ const ProductDetails = async ({ params: { id } }) => {
 
             </div>
             <div>
-                <div className="flex flex-col items-center">
+                <section className="flex flex-col items-center">
                     <div className="flex gap-1 items-center">
                         <BsFillArrowDownSquareFill className="text-xl" />
                         <p className="text-center md:text-xl font-medium">More Products from this category</p>
                         <BsFillArrowDownSquareFill className="text-xl" />
                     </div>
                     <small className="text-blue-400">(which you might also like)</small>
-                </div>
-                <section className={`grid grid-cols-1 sm:grid-cols-2 lg:${products.length > 4 ? "grid-cols-4" : "grid-cols-3"} gap-7 my-14 px-10 sm:px-6 py-3 md:px-16`}>
+                </section>
+                <section className={`grid grid-cols-1 sm:grid-cols-2 lg:${products?.length > 4 ? "grid-cols-4" : "grid-cols-3"} gap-7 my-14 px-10 sm:px-6 py-3 md:px-16`}>
                     {products.map((product) => {
                         return (
                             <>
